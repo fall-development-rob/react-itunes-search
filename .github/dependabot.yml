@@ -1,0 +1,33 @@
+version: 2
+
+registries:
+  npm-github:
+    type: npm-registry
+    url: "https://npm.pkg.github.com"
+    token: "${{ secrets.GH_NPM_TOKEN }}"
+
+updates:
+  - package-ecosystem: npm
+    directory: /
+    registries:
+      - npm-github
+    schedule:
+      interval: weekly
+      day: monday
+      time: "07:00"
+      timezone: Europe/London
+    versioning-strategy: increase
+    commit-message:
+      prefix: chore
+    # open-pull-requests-limit: 5
+    groups:
+      dependencies:
+        dependency-type: production
+        update-types:
+          - minor
+          - patch
+      devDependencies:
+        dependency-type: development
+        update-types:
+          - minor
+          - patch
