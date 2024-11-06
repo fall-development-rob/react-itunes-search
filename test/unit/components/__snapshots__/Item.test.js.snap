@@ -28,13 +28,13 @@ exports[`<Item /> Item component should renders correctly 1`] = `
           more_vert
         </i>
       </span>
-      <p>
+      <span>
         <a
           target="_blank"
         >
           more
         </a>
-      </p>
+      </span>
     </div>
     <div
       className="card-reveal"
