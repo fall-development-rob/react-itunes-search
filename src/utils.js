@@ -24,7 +24,7 @@ export function getMedia(str: string): string {
 export const getApiUrl = ({
   media,
   query
-}: HeaderState) => `https://itunes.apple.com/search?media=${getMedia('music')}&term=${query.split(' ').join('+')}`;
+}: HeaderState) => `https://itunes.apple.com/search?media=${getMedia(media)}&term=${query.split(' ').join('+')}`;
 
 export function getKind(str: string): string {
   if (typeof str !== 'string') {

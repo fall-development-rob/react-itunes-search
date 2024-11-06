@@ -6,16 +6,17 @@ import emitter from '../emitter';
 import type { HeaderState, SearchOption } from '../type';
 import '../style/Header.css';
 
+// Only music option enabled for this version.
 const options: Array<SearchOption> = [
-  'All',
-  'Audiobook',
-  'eBook',
-  'Movie',
+  // 'All',
+  // 'Audiobook',
+  // 'eBook',
+  // 'Movie',
   'Music',
-  'Music Video',
-  'Podcast',
-  'TV Show',
-  'Software'
+  // 'Music Video',
+  // 'Podcast',
+  // 'TV Show',
+  // 'Software'
 ];
 
 class Header extends React.PureComponent<{}, HeaderState> {
@@ -27,7 +28,7 @@ class Header extends React.PureComponent<{}, HeaderState> {
   rAf: any;
 
   state: HeaderState = {
-    media: 'All',
+    media: 'Music',
     query: ''
   };
 
@@ -84,7 +85,9 @@ class Header extends React.PureComponent<{}, HeaderState> {
                 className="search-input white black-text"
               />
             </div>
-            <div className="dropdown-wrapper">
+
+            {/* Media selection drop down */}
+            {/* <div className="dropdown-wrapper">
               <div
                 className="dropdown-button"
                 role="button"
@@ -95,7 +98,7 @@ class Header extends React.PureComponent<{}, HeaderState> {
               <ul id="search-options" className="dropdown-content">
                 {this.renderSearchOption()}
               </ul>
-            </div>
+            </div> */}
           </div>
         </nav>
       </div>
