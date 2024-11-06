@@ -4,9 +4,12 @@ export type ContainerState = {
   data?: Object
 };
 
-export type SearchOption = 'All' | 'Audiobook' | 'eBook' | 'Movie' | 'Music' | 'Music Video' | 'Podcast' | 'TV Show' | 'Short Film' | 'Software';
+// To enable more search options in later version
+// export type SearchOption = 'All' | 'Audiobook' | 'eBook' | 'Movie' | 'Music' | 'Music Video' | 'Podcast' | 'TV Show' | 'Short Film' | 'Software';
+export type SearchOption = 'Music';
 
 export type HeaderState = {
+  // Currently just using music for the coding exercise
   media: SearchOption,
   query: string
 };
