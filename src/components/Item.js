@@ -15,10 +15,10 @@ const Item = (props: SearchResult) => (
         />
       </div>
       <div className="card-content">
-        <span className="card-title activator grey-text text-darken-4">{props.trackName || props.collectionName} - {props.artistName}<i className="material-icons right">more_vert</i></span>
+        <span className="card-title activator grey-text text-darken-4">{props.trackName || 'Untitled'} - {props.artistName}<i className="material-icons right">more_vert</i></span>
         
         <span>{props.collectionName}</span>
-        <p>
+        <span>
           <a target="_blank" href={props.trackViewUrl || props.collectionViewUrl}>
             more
           </a>
@@ -28,11 +28,11 @@ const Item = (props: SearchResult) => (
                 {getKind(props.kind)}
               </p> : null
           }
-        </p>
+        </span>
       </div>
       <div className="card-reveal">
         <span className="card-title grey-text text-darken-4">{props.trackName || props.collectionName}<i className="material-icons right">close</i></span>
-        <p>{props.longDescription || props.description || 'No description.'}</p>
+        <span>{props.longDescription || props.description || 'No description.'}</span>
       </div>
     </div>
   </div>
