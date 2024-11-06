@@ -1,18 +1,23 @@
-import 'babel-polyfill';
-import { render } from 'react-dom';
-import { AppContainer } from 'react-hot-loader';
+import 'core-js/stable';
+import 'regenerator-runtime/runtime';
+import { createRoot } from 'react-dom/client';
 import React from 'react';
 import App from './components/App';
 
-const renderApp = Comp => render(
-  <AppContainer>
-    <Comp />
-  </AppContainer>,
-  document.querySelector('#itunes-search')
-);
+const renderApp = (Component) => {
+  const root = createRoot(document.querySelector('#itunes-search'));
 
+  root.render(<Component />)
+
+};
+
+// Initial render
 renderApp(App);
 
+// Enable HMR if module.hot is available
 if (module.hot) {
-  module.hot.accept('./components/App', _ => renderApp(App));
+  module.hot.accept('./components/App', () => {
+    const NextApp = require('./components/App').default;
+    renderApp(NextApp);
+  });
 }
