@@ -1,6 +1,5 @@
 # react-iTunes-search
 
-
 ## Installation
 
 1. `git clone https://github.com/fall-development-rob/react-itunes-search.git`
@@ -9,9 +8,14 @@
 
 ## Dev
 
-## Deploy
+`npm run dev`
+## Build
+
+`npm run build`
 
 ## Lint
+
+`npm run lint`
 
 ## Unit test
 
