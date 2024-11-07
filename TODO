@@ -1,0 +1,8 @@
+- Test Dependabot
+- Refactor utils.js 
+- Reintroduce other media
+- Add sorting into albums to enhance ux
+- Add and modify tests
+- Get Hot reloading working
+- Add versioning using lerna
+- Add PR template
